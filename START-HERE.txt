@@ -1,0 +1,39 @@
+APEX CLIENT — START HERE (Windows)
+==================================
+
+I am new to modding. What do I do?
+
+1. Install Java 21 (64-bit JDK) if it is not already installed:
+   https://adoptium.net/temurin/releases/?version=21
+   Choose Windows x64, JDK, then install it.
+
+2. Right-click this ZIP and choose “Extract All”. Open the extracted Apex folder.
+
+3. Double-click build.bat. A black window will open. Keep it open.
+   The first run downloads Gradle and Minecraft/Fabric build dependencies, so
+   your PC needs an internet connection and may take a while.
+
+4. If the build succeeds, it will say BUILD SUCCESS and ask whether to copy Apex
+   into your Minecraft mods folder. Type Y and press Enter if you use the default
+   Minecraft Launcher folder. If you use a custom launcher/game folder, answer N
+   and copy the JAR from build\libs manually to that instance's mods folder.
+
+5. Launch Minecraft Java Edition with Fabric for Minecraft 1.21.11. Make sure the
+   matching Fabric API mod is also in that instance's mods folder. Press Right Shift
+   in-game to open the Apex ClickGUI.
+
+IF SOMETHING FAILS
+------------------
+- Do not download a random JAR from another website.
+- Take a screenshot of the error in the black window and send it to ChatGPT.
+- The project must print BUILD SUCCESS before treating the generated JAR as built.
+
+ONLINE BUILD ALTERNATIVE
+-----------------------
+This project also includes .github/workflows/build.yml for GitHub Actions. Upload
+the contents of the Apex folder to a GitHub repository, commit the files, open the
+Actions tab, run “Build Apex”, and download the Apex-Fabric-1.21.11 artifact if the
+run succeeds.
+
+This project has not been compiled in the preparation environment because it has
+no installed Gradle and cannot resolve external downloads.
